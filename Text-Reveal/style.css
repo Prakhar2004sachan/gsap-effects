@@ -90,40 +90,40 @@ section {
 .anime-text .word span.keyword{
     display: inline-block;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 2rem;
     padding: .1rem 0;
     color: #141414;
 }
 
 .anime-text .word span.keyword::before{
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
     width: calc(100% + 1rem);
-    height: calc(100%+.4rem);
+    height: calc(100% + .4rem);
     background: #fff;
     border-radius: 2rem;
     z-index: -1;
 }
 
-.anime-text .word span.word.keyword.vibrant::before,
-.anime-text .word span.word.keyword.shape::before,
-.anime-text .word span.word.keyword.interactive::before{
+.anime-text .word span.keyword.vibrant::before,
+.anime-text .word span.keyword.shape::before,
+.anime-text .word span.keyword.interactive::before{
     background: #7a78ff;
 }
 
-.anime-text .word span.word.keyword.living::before,
-.anime-text .word span.word.keyword.expression::before,
-.anime-text .word span.word.keyword.storytelling::before{
+.anime-text .word span.keyword.living::before,
+.anime-text .word span.keyword.expression::before,
+.anime-text .word span.keyword.storytelling::before{
     background: #fe6d38;
 }
 
-.anime-text .word span.word.keyword.clarity::before,
-.anime-text .word span.word.keyword.intuitive::before,
-.anime-text .word span.word.keyword.vision::before{
+.anime-text .word span.keyword.clarity::before,
+.anime-text .word span.keyword.intuitive::before,
+.anime-text .word span.keyword.vision::before{
     background: #c6fe69;
 }
 
@@ -152,7 +152,7 @@ section {
         padding: .1rem .2rem;
     }
 
-    .anime-text .word.keyword-wrapper{
+    .anime-text .keyword-wrapper{
         margin: 0 .2rem .1rem .1rem;
     }
 }
