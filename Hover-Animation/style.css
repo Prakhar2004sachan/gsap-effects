@@ -37,6 +37,26 @@ section {
   overflow: hidden;
 }
 
+#cursor{
+    background: #f83435;
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+}
+svg{
+    width: 20%;
+    height: 20%;
+    rotate: -45deg;
+}
+
 .profile-images {
   width: max-content;
   display: flex;

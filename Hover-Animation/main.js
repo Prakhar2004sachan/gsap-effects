@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileImagesContainer = document.querySelector(".profile-images");
   const profileImages = document.querySelectorAll(".profile-images .img");
   const nameElem = document.querySelectorAll(".profile-names .name");
+  const cursor = document.querySelector("#cursor");
   const nameHeadings = document.querySelectorAll(".profile-names .name h1");
 
   nameHeadings.forEach((heading) => {
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const correspondingName = nameElem[index + 1];
       const letters = correspondingName.querySelectorAll(".letter");
 
-      img.addEventListener("mouseenter", () => {
+      img.addEventListener("mousemove", (e) => {
         gsap.to(img, {
           width: 140,
           height: 140,
@@ -41,9 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
             from: "center",
           },
         });
+
+        gsap.to(cursor, {
+          opacity: 1,
+          scale: 1,
+          y: e.clientY,
+          x: e.clientX,
+          duration: 0.75,
+          ease: "back.out",
+        });
       });
 
-      img.addEventListener("mouseleave", () => {
+      img.addEventListener("mouseleave", (e) => {
         gsap.to(img, {
           width: 70,
           height: 70,
@@ -60,10 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
             from: "center",
           },
         });
+
+        gsap.to(cursor, {
+          opacity: 0,
+          scale: 0,
+          y: e.clientY,
+          x: e.clientX,
+          duration: 0.75,
+          ease: "back.out",
+        });
       });
     });
 
-    profileImagesContainer.addEventListener("mouseenter", () => {
+    profileImagesContainer.addEventListener("mouseenter", (e) => {
       gsap.to(defaultLetters, {
         y: "0%",
         ease: "power4.out",
