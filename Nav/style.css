@@ -201,59 +201,98 @@ nav {
   opacity: 0.25;
 }
 
-.menu-content-wrapper{
-    flex: 3;
-    position: relative;
-    display: flex;
+.menu-content-wrapper {
+  flex: 3;
+  position: relative;
+  display: flex;
 }
 
-.menu-content-main{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.menu-content-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.menu-footer{
-    margin: 0 auto;
+.menu-footer {
+  margin: 0 auto;
 }
 
 .menu-content-main,
-.menu-footer{
-    width: 75%;
-    padding: 2rem;
-    display: flex;
-    align-items: flex-end;
-    gap: 2rem;
+.menu-footer {
+  width: 75%;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
 }
 
-.menu-col{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+.menu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.menu-col:nth-child(1){
-    flex: 3;
+.menu-col:nth-child(1) {
+  flex: 3;
 }
 
-.menu-col:nth-child(2){
-    flex: 2;
+.menu-col:nth-child(2) {
+  flex: 2;
 }
 
-.menu-link a{
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    font-family: "PolySans";
+.menu-link a {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: "PolySans";
 }
 
 .menu-tag a,
-.menu-footer p{
-    color: var(--menu-fg-secondary);
+.menu-footer p {
+  color: var(--menu-fg-secondary);
 }
 
 .line {
-    position: relative;
-    will-change: transform;
+  position: relative;
+  will-change: transform;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+  }
+
+  section h1 {
+    width: 100%;
+  }
+
+  .menu-media-wrapper {
+    display: none;
+  }
+
+  .menu-content-main,
+  .menu-footer {
+    width: 100%;
+  }
+
+  .menu-content-main {
+    top: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+  }
+
+  .menu-link a {
+    font-size: 3rem;
+  }
+
+  .menu-tag a {
+    font-size: 1.25rem;
+  }
+
+  .menu-bar img {
+    filter: invert(100);
+  }
 }
