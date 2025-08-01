@@ -111,7 +111,7 @@ nav {
 }
 
 .menu-logo {
-  width: 2rem;
+  width: 8rem;
 }
 
 .menu-toggle-btn {
@@ -183,6 +183,7 @@ nav {
 
 .menu-overlay {
   background-color: var(--menu-bg);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   will-change: clip-path;
 }
 
@@ -194,6 +195,7 @@ nav {
 
 .menu-media-wrapper {
   flex: 2;
+  opacity: 0;
   will-change: opacity;
 }
 
