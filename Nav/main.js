@@ -3,7 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   //   console.log(CustomEase, SplitText);
   CustomEase.create("hop", ".87, 0, .13, 1");
 
-  const lenis = new Lenis();
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true, 
+    smoothTouch: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 2,
+  });
+  console.log(lenis)
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
