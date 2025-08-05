@@ -3,8 +3,13 @@
   src: url(./fonts/Host_Grotesk-normal-400-latin.wBCQJesg.woff2);
 }
 
+
 html.lenis, html.lenis body {
   height: auto;
+}
+
+html.lenis {
+  overflow-y: auto !important;
 }
 
 .lenis.lenis-smooth {
@@ -40,6 +45,8 @@ html.lenis, html.lenis body {
 body {
   width: 100%;
   font-family: "host", sans-serif;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 section {

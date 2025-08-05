@@ -1,8 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
-  const lenis = new Lenis();
+ 
+  const lenis = new Lenis({
+    smooth: true, // Ensure smooth scrolling is enabled
+  });
+  lenis.start(); // Explicitly start Lenis
 
-  lenis.on("scroll", ScrollTrigger.update);
+  // Debug Lenis scroll
+  lenis.on("scroll", () => {
+    console.log("Lenis is scrolling");
+    ScrollTrigger.update();
+  });
+
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
   });
