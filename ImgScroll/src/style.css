@@ -1,0 +1,16 @@
+@font-face {
+    font-family: beausite;
+    src: url('./fonts/beausiteclassicclear-webfont.BFP7pHT_.woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 100vh; */
+  width: 100vw;
+  font-family: 'beausite';
+}
