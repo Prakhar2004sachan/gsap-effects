@@ -74,6 +74,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  color: var(--light);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -84,6 +85,10 @@ nav {
 nav p {
   padding: 1rem;
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-overlay {
