@@ -46,7 +46,7 @@ function createSlides() {
 
     const img = document.createElement("img");
     const imageNumber = (i % totalSlides) + 1;
-    img.src = `/slide-${imageNumber}.jpg`;
+    img.src = `/imagecompressor/slide-${imageNumber}-min.jpg`;
 
     slide.appendChild(img);
     slider.appendChild(slide);
@@ -160,7 +160,7 @@ function createThumbnailItems() {
 
     const img = document.createElement("img");
     const imageNumber = i + 1;
-    img.src = `/slide-${imageNumber}.jpg`;
+    img.src = `/imagecompressor/slide-${imageNumber}.jpg`;
     thumbnail.appendChild(img);
 
     gsap.set(thumbnail, {
