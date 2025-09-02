@@ -183,7 +183,7 @@ function updateThumbnailItems() {
   thumbnails.forEach((thumbnail) => {
     const baseAngle = parseFloat(thumbnail.dataset.angle);
     const radius = isMobile ? 150 : 350;
-    const currentAngle = baseAngle + (currentRotationAngle * Math.PI) / 180;
+    const currentAngle = -( baseAngle + (currentRotationAngle * Math.PI) / 180);
 
     const x = radius * Math.cos(currentAngle) + window.innerWidth / 2;
     const y = radius * Math.sin(currentAngle) + window.innerHeight / 2 - 25;
