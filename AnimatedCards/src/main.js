@@ -32,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
           scrollTrigger: {
             trigger: cards[index + 1],
             start: "top 85%",
-            end: "top -75",
+            end: "top -75%",
             scrub: true,
             pin: card,
+            markers: true,
             pinSpacing: false,
           },
         }
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
           start: "top 75%",
           end: "top -25%",
           scrub: true,
+          markers: true,
         },
       });
     }
